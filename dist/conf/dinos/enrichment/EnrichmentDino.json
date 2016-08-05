@@ -1,0 +1,51 @@
+{
+    "enrichment_bin": "conf/dinos/enrichment/hypg",
+
+    "display": {
+
+        "gene": {
+            "filter": "ensembl_gene_id",
+            "gene_attribute": "external_gene_id",
+            "description_attribute": "description",
+            "other_attributes": ["status", "gene_biotype", "chromosome_name", "start_position", "end_position", "strand", "transcript_count"]
+        },
+
+        "annotation": {
+
+            "Gene Ontology (GO)": {
+                "filters": {
+                    "with_ox_goslim_goa": "only"
+                },
+                "annotation_attribute": "goslim_goa_accession",
+                "description_attribute": "goslim_goa_description",
+                "other_attributes": []
+            },
+
+            "MIM (Human)": {
+                "annotation_attribute": "mims__mim_morbid_accession_101",
+                "description_attribute": "mims__mim_morbid_description_101",
+                "other_attributes": []
+            },
+
+            "MIM": {
+                "annotation_attribute": "mim_morbid_accession",
+                "description_attribute": "mim_morbid_description",
+                "other_attributes": []
+            },
+
+            "Reactome (Human)": {
+                "annotation_attribute": "reactome_human__pathway_id_101",
+                "description_attribute": "reactome_human__pathway_name_101",
+                "other_attributes": []
+            },
+
+            "Reactome": {
+                "annotation_attribute": "stableidentifier_identifier",
+                "description_attribute": "_displayname",
+                "other_attributes": []
+            }
+        }
+
+    }
+}
+
